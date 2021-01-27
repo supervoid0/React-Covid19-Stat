@@ -4,14 +4,12 @@ import CountUp from "react-countup";
 import cx from "classnames";
 import styles from './Cards.module.css';
 
-
 const Cards = ({data : {confirmed, recovered, deaths, lastUpdate } }) => {
 if(!confirmed){
     return "loading.."
 }
     return (
     <div className={styles.container}>
-
         <Grid container spacing={3} justify="center">
             <Grid item component={Card} xs={8} md={3} className={cx(styles.card, styles.infected)}>
                 <CardContent>
@@ -21,7 +19,6 @@ if(!confirmed){
                     <Typography variant="body2">Active case</Typography>
                 </CardContent>
             </Grid>
-
             <Grid item component={Card} xs={8} md={3} className={cx(styles.card, styles.recovered)}>
                 <CardContent>
                     <Typography color="textSecondary" gutterBottom>Recovered</Typography>
@@ -30,7 +27,6 @@ if(!confirmed){
                     <Typography variant="body2">Recovered case</Typography>
                 </CardContent>
             </Grid>
-
             <Grid item component={Card} xs={8} md={3} className={cx(styles.card, styles.deaths)}>
                 <CardContent>
                     <Typography color="textSecondary" gutterBottom>Death</Typography>
@@ -39,9 +35,8 @@ if(!confirmed){
                     <Typography variant="body2">Death case</Typography>
                 </CardContent>
             </Grid>
-
-
         </Grid>
-    </div>);
+    </div>
+    );
 }
 export default Cards;

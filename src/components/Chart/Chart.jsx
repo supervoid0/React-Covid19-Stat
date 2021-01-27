@@ -36,10 +36,8 @@ const Chart= ()=> {
         }}
         />
         ) : null
-
-
     );
-
+    
     return(
         <div className={styles.container}>
             {lineChart}
